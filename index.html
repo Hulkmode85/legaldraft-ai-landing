@@ -45,7 +45,7 @@ h1 span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fil
 .price-btn{display:block;padding:14px;background:var(--gradient);border:none;border-radius:8px;color:#fff;font-weight:600;font-size:1rem;text-decoration:none;margin-top:20px}
 footer{text-align:center;padding:40px;color:#444;font-size:.85rem;border-top:1px solid rgba(255,255,255,.06)}
 @media(max-width:768px){h1{font-size:2.2rem}.hero{padding:120px 20px 60px}}
-</style>
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}</style>
 </head>
 <body>
 <nav><div class="nav-inner"><span class="logo">LegalDraft AI</span><a class="nav-cta" href="https://web-production-35768.up.railway.app">Open App</a></div></nav>
@@ -102,5 +102,5 @@ footer{text-align:center;padding:40px;color:#444;font-size:.85rem;border-top:1px
 </div>
 
 <footer>&copy; 2026 LegalDraft AI. All rights reserved.</footer>
-</body>
+<script>document.addEventListener("DOMContentLoaded",()=>{const els=document.querySelectorAll(".feature,.price-card,.use-case,.doc-type,.hero,.badge,.section-title,.section-sub,.hero-cta,.output-preview");els.forEach(el=>el.classList.add("reveal"));const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}})},{threshold:.15});document.querySelectorAll(".reveal").forEach(el=>obs.observe(el))});</script></body>
 </html>
